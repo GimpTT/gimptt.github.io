@@ -36,7 +36,6 @@ body,html{
     background-position: center;   /* Keep center visible */
     background-repeat: no-repeat;
     z-index: 1;
-    animation: glower 5s ease-in infinite forwards;
 }
 @keyframes glower {
     0%{
@@ -155,7 +154,7 @@ body,html{
 .textCont{
     width: 70%;
     height: 75%;
-    margin-top: 2%;
+    margin-top: 0%;
     color: #ffffff;
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
