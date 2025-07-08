@@ -316,6 +316,9 @@ body,html{
   margin-top: -5px; /* aligns thumb to track */
   cursor: pointer;
 }
+h5{
+    font-size: 20px;
+}
 #seek::-webkit-slider-thumb:hover{
     background-color: #ffffff;
     transform: scale(1.05);
@@ -331,9 +334,10 @@ body,html{
         width: 70px;
     }
     h5{
-        font-size: 0.75rem;
+        font-size: 18px;
     }
 }
+
 
 /* Phone (up to 480px) */
 @media (max-width: 480px) {
@@ -345,12 +349,12 @@ body,html{
         width: 80px;
     }
     h5{
-        font-size: 0.70rem;
+        font-size: 17px;
     }
 }
 @media (max-width: 360px) {
     h5{
-        font-size: 0.60rem;
+        font-size: 13px;
     }
     #queue{
         width: 90px;
