@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gimp MP3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio id="player" controls hidden></audio>
+    <div class="playerContain">
+        <div class="coverArt"></div>
+
+        <div class="glow"></div>
+
+        <div class="dataPanle" id="panel">
+            <h3>Name: Kid And Leveret</h3>
+            <h3>Artist: Yaelokre</h3>
+            <h3>Album: Kid And Leveret</h3>
+            <h3>Year: 2025</h3>
+            <h3>Genre: Folk</h3>
+        </div>
+
+        <div class="bean topbean">
+            <div class="reabso">
+                <div class="textCont">
+                    <h5 style="margin:0;" id="title">No Song</h5>
+                    <h5 style="margin:0;"id="artist">Null</h5>
+                </div>
+                <div class="holder">
+                    <div class="controlBtn" style="mask-image: url(info.png); -webkit-mask-image: url(info.png); height:60px;" id="Info"></div>
+                    <div class="controlBtn" style="mask-image: url(queue.png); -webkit-mask-image: url(queue.png); height:60px;" id="queue"></div>
+                </div>
+            </div>
+        </div>
+        <div class="bean middleBean" id="midBean">
+            <input type="file" accept=".zip" id="fileInput" hidden>
+            <label for="fileInput" class="folderAdder">Upload .Zip of MP3s</label>
+        </div>
+        <div class="bean bottombean">
+            <div class="fullSizedFlex">
+                <div class="flexdiv ">
+                    <div class="controlBtn" style="mask-image: url(shuffle.png); -webkit-mask-image: url(shuffle.png);" id="shuffle"></div>
+                    <div class="controlBtn" style="mask-image: url(fastBack.png); -webkit-mask-image: url(fastBack.png); height:50px" id="fbw"></div>
+                    <div class="controlBtn" style="mask-image: url(play.png); -webkit-mask-image: url(play.png); height:50px" id="pause"></div>
+                    <div class="controlBtn" style="mask-image: url(fastFWD.png); -webkit-mask-image: url(fastFWD.png); height:57px" id="ffw"></div>
+                    <div class="controlBtn" style="mask-image: url(loop.png); -webkit-mask-image: url(loop.png); height:80px" id="loop"></div>
+                </div>
+                <input type="range" id="seek" min="0" max="100" value="0" style="width: 90%;">
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsmediatags/3.9.5/jsmediatags.min.js"></script>
+    <script src="mp3er.js"></script>
+    <script src="playback.js"></script>
+    <script src="panels.js"></script>
+</body>
+</html>
