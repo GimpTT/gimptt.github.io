@@ -86,8 +86,10 @@ audio.addEventListener('timeupdate', ()=>{
     const currentTime = audio.currentTime;
     seek.value = currentTime
     updateSeek()
-    if(currentTime == audio.duration){
+    if(currentTime == audio.duration && !endedHandled){
+        endedHandled = true
         if(!looping){
+            console.log('songnum up')
             songNum++
         }
         nextPlay(songNum)
@@ -100,10 +102,12 @@ seek.addEventListener('input', ()=>{
 })
 ffw.addEventListener('click', () => {
     songNum++
+    console.log('songnum up')
     nextPlay(songNum)
 });
 fbw.addEventListener('click', () => {
     songNum = songNum-1
+    console.log('songnum down')
     nextPlay(songNum)
 })
 shuffle.addEventListener('click', () => {
@@ -144,10 +148,12 @@ if('mediaSession' in navigator){
     })
     navigator.mediaSession.setActionHandler('previoustrack', () => {
         songNum = songNum-1
+        console.log('songnum down')
         nextPlay(songNum)
     })
     navigator.mediaSession.setActionHandler('nexttrack', () => {
         songNum = songNum+1
+        console.log('songnum up')
         nextPlay(songNum)
     })
 }
