@@ -29,8 +29,9 @@ body,html{
     top: 0;
     width: 100%;
     height: 100%;
+    border-radius: 20px;
     background-image:linear-gradient(45deg, #873AB7, #1AC72E);
-    /*background-image:url(testcover.png);*/ 
+    /*background-image:url(testcover.png); */
     filter: blur(20px);
     background-size: cover;        /* Fill the box, crop excess */
     background-position: center;   /* Keep center visible */
@@ -71,6 +72,7 @@ body,html{
     left: 5%;
     backdrop-filter: blur(5px);
     border-radius: 7.5vh;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.4);
 }
 .topbean{
     position: absolute;
@@ -147,12 +149,13 @@ body,html{
     height: 100%;
     position: relative;
     display: flex;
+    flex-shrink: 0;
     align-items: center;
     justify-content: center;
     flex-direction: row;
 }
 .textCont{
-    width: 70%;
+    width: 65%;
     height: 75%;
     margin-top: 0%;
     color: #ffffff;
@@ -164,7 +167,7 @@ body,html{
     gap: 5px;
 }
 .holder{
-    width: 25%;
+    width: 30%;
     margin-right: 5%;
     height: 100%;
     display: flex;
@@ -256,10 +259,17 @@ body,html{
     align-items: center;
     font-family: Arial, Helvetica, sans-serif;
 }
+.middleBean.show{
+    display: flex;
+}
+.middleBean.active{
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
 .folderAdder{
     width: 80%;
     height: 50%;
-    background-color: #23232395;
     border: none;
     border-radius: 20px;
     color: #ffffff;
@@ -270,51 +280,70 @@ body,html{
 }
 .folderAdder:hover{
     cursor: pointer;
-    background-color: #232323;
+    background-color: #23232395;
     transform: scale(1.1);
 }
 #seek{
     width: 90%;
-    height: 6px;
+    height: 10px;
     background: transparent; /* we set gradient with JS */
-    border-radius: 3px;
+    border-radius: 5px;
     outline: none;
     -webkit-appearance: none;
     margin-top: 10px;
 }
 #seek::-moz-range-track {
-  height: 6px;
+  height: 10px;
   background: transparent;
-  border-radius: 3px;
+  border-radius: 5px;
 }
 #seek::-moz-range-thumb {
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
   background:#b78bff;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
   transition: all ease 0.3s;
 }
 #seek::-moz-range-thumb:hover{
     background-color: #ffffff;
-    transform: scale(1.05);
+    transform: scale(1.1);
 }
 #seek::-webkit-slider-runnable-track {
-  height: 6px;
+  height: 10px;
   background: transparent;
-  border-radius: 3px;
+  border-radius: 5px;
 }
 
 /* WebKit Thumb */
 #seek::-webkit-slider-thumb {
   -webkit-appearance: none;
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
   background: #b78bff;
-  border-radius: 50%;
+  border-radius: 10px;
   margin-top: -5px; /* aligns thumb to track */
   cursor: pointer;
+}
+#uploaded{
+    mask-size: 180%;
+    -webkit-mask-size: 80px 80px;
+    margin-top: 3%;
+    width: 50px;
+    height: 50px;
+    background-color: var(--accent);
+    mask-repeat: no-repeat;
+    mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center; 
+    transition: all 0.3s ease;
+
+}
+#uploaded:hover{
+    background-color: var(--hovclik);
+    transform: scale(1.2,1.2);
+    cursor: pointer;
 }
 h5{
     font-size: 20px;
@@ -328,6 +357,12 @@ h5{
         width: 75vw;
         margin-left: 12.5vw;
     }
+    .textCont{
+        width: 65%;
+    }
+    .holder{
+        width: 30%;
+    }
 }
 @media (max-width: 600px) {
     #queue{
@@ -336,27 +371,42 @@ h5{
     h5{
         font-size: 18px;
     }
+    .textCont{
+        width: 60%;
+    }
+    .holder{
+        width: 35%;
+    }
 }
 
 
 /* Phone (up to 480px) */
 @media (max-width: 480px) {
+    html,body{
+        height: 110vh;
+    }
     .playerContain{
         width: 90vw;
         margin-left: 5vw;
     }
-    #queue{
-        width: 80px;
+    .textCont{
+        width: 55%;
+    }
+    .holder{
+        width: 40%;
     }
     h5{
-        font-size: 17px;
+        font-size: 16px;
     }
 }
 @media (max-width: 360px) {
     h5{
         font-size: 13px;
     }
-    #queue{
-        width: 90px;
+    .textCont{
+        width: 50%;
+    }
+    .holder{
+        width: 45%;
     }
 }
