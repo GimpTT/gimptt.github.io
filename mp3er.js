@@ -2,13 +2,16 @@ let titleBox = document.getElementById('title');
 let artistBox = document.getElementById('artist');
 let coverArt = document.querySelector('.coverArt');
 let glow = document.querySelector('.glow');
+let uploader = document.querySelector('#uploaded');
 let paused = false
 let endedHandled = false;
 let songNum = 0
+let fileUploaded = false
+let middleBeaned = true;
 function lengthcutter(item){
     let result
-    if(item.length>25){
-        result = item.slice(0, 25)+ '...';
+    if(item.length>20){
+        result = item.slice(0, 20)+ '...';
     }else{
         result = item
     }
@@ -69,7 +72,9 @@ async function play(song){
 }
 
 let mp3List = []
+let middlebean = document.getElementById('midBean')
 document.getElementById('fileInput').addEventListener('change',async function (event) {
+    mp3List = []
    const zipFile = event.target.files[0];
    if (!zipFile){
     console.log("not Zip");
@@ -87,10 +92,30 @@ document.getElementById('fileInput').addEventListener('change',async function (e
             }
         }
         console.log('Quick List',mp3List)
-        document.querySelector('#midBean').style.display = 'none';
+        middlebean.style.display = 'none';
+        middleBeaned = false;
+        uploader.style.backgroundColor = ''
         play(mp3List[0])
+        fileUploaded = true
         songNum = 0
    } catch(err){
         console.log(err)
    }
 });
+uploader.addEventListener('click', () => {
+    if(!middleBeaned){
+        middlebean.style.display = 'flex'
+        uploader.style.backgroundColor = '#ffffff'
+        middlebean.classList.add('show'); // unhide immediately
+        middlebean.offsetHeight;
+        requestAnimationFrame(() => {
+            middlebean.classList.add('active');
+        }) // trigger animation next frame
+        middleBeaned = true
+    }else{
+        middlebean.style.display = 'none';
+        uploader.style.backgroundColor = ''
+        middleBeaned = false
+
+    }
+})
