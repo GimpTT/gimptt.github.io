@@ -3,6 +3,7 @@ let artistBox = document.getElementById('artist');
 let coverArt = document.querySelector('.coverArt');
 let glow = document.querySelector('.glow');
 let paused = false
+let endedHandled = false;
 let songNum = 0
 function lengthcutter(item){
     let result
@@ -48,9 +49,14 @@ async function play(song){
         });
     });
     const audioPlayer = document.querySelector('#player');
+    if (audioPlayer.src.startsWith('blob:')) {
+        URL.revokeObjectURL(audioPlayer.src);
+    };
     const blobUrl = URL.createObjectURL(song[1]);
+    audioPlayer.pause(); // ← correct reference
     audioPlayer.src = blobUrl;
     console.log(metaArray)
+    endedHandled = false
     if ('mediaSession' in navigator) {
         navigator.mediaSession.metadata = new MediaMetadata({
             title: metaArray[0],
