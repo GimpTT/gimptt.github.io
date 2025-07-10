@@ -155,7 +155,7 @@ body,html{
     flex-direction: row;
 }
 .textCont{
-    width: 65%;
+    width: 62%;
     height: 75%;
     margin-top: 0%;
     color: #ffffff;
@@ -167,7 +167,7 @@ body,html{
     gap: 5px;
 }
 .holder{
-    width: 30%;
+    width: 33%;
     margin-right: 5%;
     height: 100%;
     display: flex;
@@ -364,6 +364,16 @@ h5{
         width: 30%;
     }
 }
+
+@media (max-height: 850px) and (orientation: landscape) {
+  .topbean{
+    height: 12vh;
+  }
+  .bottombean{
+    height: 17vh;
+  }
+}
+
 @media (max-width: 600px) {
     #queue{
         width: 70px;
@@ -372,16 +382,30 @@ h5{
         font-size: 18px;
     }
     .textCont{
-        width: 60%;
+        width: 58%;
     }
     .holder{
-        width: 35%;
+        width: 37%;
     }
 }
 
+@media (max-height: 600px) and (orientation: landscape) {
+  .topbean{
+    height: 15vh;
+  }
+  .bottombean{
+    height: 20vh;
+  }
+}
+@media (max-height: 600px) and (orientation: landscape) and (max-width: 900px) {
+  .playerContain{
+    width: 80vw;
+    margin-left: 10vw;
+  }
+}
 
 /* Phone (up to 480px) */
-@media (max-width: 480px) {
+@media (max-width: 520px) {
     html,body{
         height: 110vh;
     }
@@ -390,23 +414,87 @@ h5{
         margin-left: 5vw;
     }
     .textCont{
-        width: 55%;
+        width: 53%;
     }
     .holder{
-        width: 40%;
+        width: 42%;
     }
     h5{
         font-size: 16px;
     }
+    .mediascope{
+        width: 40px;
+        height: 40px;
+    }
 }
-@media (max-width: 360px) {
+
+@media (max-height: 520px) and (orientation: landscape) {
+  .topbean{
+    height: 18vh;
+  }
+  .bottombean{
+    height: 23vh;
+  }
+}
+
+
+@media (max-width: 410px) {
     h5{
         font-size: 13px;
     }
     .textCont{
-        width: 50%;
+        width: 58%;
     }
     .holder{
-        width: 45%;
+        width: 37%;
     }
+    #uploaded{
+        width: 40px;
+        height: 40px;
+        mask-size: 60px 60px;
+        -webkit-mask-size: 60px 60px;
+    }
+    #Info{
+        width: 40px;
+        height: 40px;
+        mask-size: 40px 40px;
+        -webkit-mask-size: 40px 40px;
+    }
+    #queue{
+        width: 40px;
+        height: 40px;
+        mask-size: 40px 40px;
+        -webkit-mask-size: 40px 40px;
+    }
+    
+}
+
+@media (max-height: 410px) and (orientation: landscape) {
+  .topbean{
+    height: 21vh;
+  }
+  .bottombean{
+    height: 28vh;
+  }
+}
+
+@media (max-width: 300px) {
+    h5{
+        font-size: 13px;
+    }
+    .textCont{
+        width: 47%;
+    }
+    .holder{
+        width: 48%;
+    }
+}
+
+@media (max-height: 300px) and (orientation: landscape) {
+  .topbean{
+    height: 24vh;
+  }
+  .bottombean{
+    height: 30vh;
+  }
 }
