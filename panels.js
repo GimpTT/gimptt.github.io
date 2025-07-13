@@ -12,10 +12,12 @@ function showPanel(){
     }) // trigger animation next frame
 }
 function hidePanel() {
+    panelBusy = true
     panelParent.classList.remove('active'); // start fade/scale out
     panelParent.offsetHeight;
     setTimeout(() => {
         panelParent.classList.remove('show'); // hide after animation completes
+        panelBusy = false
     }, 1000); // matches transition duration
 }
 function metaFetch(song) {
@@ -95,7 +97,8 @@ queue.addEventListener('click',async function (event) {
 
 })
 info.addEventListener('click', async function (event) {
-    let bottomBean = document.querySelector('.bottombean');
+    if(fileUploaded){
+        let bottomBean = document.querySelector('.bottombean');
     if(infoed){
         hidePanel()
         panelParent.innerHTML = ''
@@ -133,5 +136,8 @@ info.addEventListener('click', async function (event) {
         infoed = true;
         panelBusy = false;
     }
+    }
+
 
 })
+
