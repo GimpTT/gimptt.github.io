@@ -1,0 +1,257 @@
+body,html{
+    padding: 0;
+    margin: 0;
+    background-color: #ffffff;
+}
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.hero{
+    width: 100vw;
+    height: 100vh;
+    background-image:url(Cat_August_2010-4.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+#search{
+    width: 500px;
+    height: 75px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 4px #0000002b;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#input{
+    height: 45px;
+    font-size: 40px;
+    margin-top: 0%;
+    border-radius: 15px;
+    vertical-align: middle;
+    width: 400px;
+    border: none;
+    outline: none;
+    background-color: #ffffff;
+    display: inline-block;
+}
+.credit{
+    height: 15px;
+    width: 100%;
+}
+.creditHolder{
+    width: 40%;
+    height: 65px;
+    position: absolute;
+    display: flex;
+    padding: 5px;
+    justify-content: center;
+    font-size: 15px;
+    overflow-x: scroll;
+    overflow-y: scroll;
+    top: 10px;
+    left: 100px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 4px #0000002b;
+    border-radius: 10px;
+}
+.searchBtn{
+    height: 45px;
+    padding: 0%;
+    width: 45px;
+    -webkit-mask-image: url(search.svg);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: cover;
+
+    /* fallback for Firefox */
+    mask-image: url(search.svg);
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: cover;
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: none;
+    outline: none;
+    background-color: #000000;
+    transition: all ease 0.3s;
+}
+.searchBtn:hover{
+    transform: scale(1.05);
+    background-color: rgb(58, 58, 58);
+}
+#input, .searchBtn {
+  vertical-align: middle;
+}
+.toggler{
+    width: 69px;
+    height: 69px;
+    z-index: 1;
+    background-color: #000;
+    -webkit-mask-image: url(search.svg);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: 60px 60px;
+
+    /* fallback for Firefox */
+    mask-image: url(search.svg);
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 60px 60px;
+    vertical-align: top;
+    transition: all ease 0.3s;
+}
+.toggler:hover{
+    background-color: rgb(58, 58, 58);
+}
+.bg{
+    width: 75px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow:  0px 4px 4px #0000002b;
+}
+.arrowHolder{
+    width: 10%;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ffffff;
+    box-shadow:  0px 4px 4px#0000002b;
+    border-radius: 10px;
+}
+.back{
+    -webkit-mask-image:url(chevron-left.svg);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: cover;
+    /* fallback for Firefox */
+    mask-image: url(chevron-left.svg);
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: cover;
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: none;
+    outline: none;
+    background-color: #000000;
+    transition: all ease 0.3s; 
+    width: 50px;
+    height: 50px;
+}
+.forward{
+    -webkit-mask-image:url(chevron-right.svg);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: cover;
+    /* fallback for Firefox */
+    mask-image: url(chevron-right.svg);
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: cover;
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: none;
+    outline: none;
+    background-color: #000000;
+    transition: all ease 0.3s; 
+    width: 50px;
+    height: 50px;
+}
+
+.downloadbg{
+    width: 75px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
+    position: absolute;
+    right: 12%;
+    top: 10px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow:  0px 4px 4px #0000002b;
+}
+
+.download{
+    width: 60px;
+    height: 60px;
+    padding: 0%;
+    -webkit-mask-image: url(download.svg);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: cover;
+
+    /* fallback for Firefox */
+    mask-image: url(download.svg);
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: cover;
+
+    border: none;
+    outline: none;
+    background-color: #000000;
+    transition: all ease 0.3s;
+}
+.download:hover{
+    background-color: rgb(58, 58, 58);
+}
+.back:hover,.forward:hover{
+    background-color: rgb(58, 58, 58);
+}
+@media (max-width: 700px) {
+    .arrowHolder{
+        width: 20%;
+    }
+    .downloadbg{
+        right: 25%;
+    }
+}
+@media (max-width: 580px) {
+    .creditHolder{
+        bottom: 10px;
+        top: auto;
+        width: 90vw;
+        left: 5vw;
+    }
+    #search{
+        width: 350px;
+    }
+    #input{
+        width: 250px;
+    }
+}
+@media (max-width: 380px) {
+
+    #search{
+        width: 300px;
+    }
+    #input{
+        width: 200px;
+    }
+}
