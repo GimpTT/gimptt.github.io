@@ -1,0 +1,440 @@
+body,html{
+    background-color: #161616;
+    margin: 0;
+    padding: 0;
+}
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.heady{
+    width: 80vw;
+    margin-left: 10vw;
+    background-color: #1c1c1c;
+    border-radius: 20px;
+    padding: 10px;
+    text-align: center;
+    color: aliceblue;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+.outBox{
+    width: 80vw;
+    margin-left: 10vw;
+    border-radius: 20px;
+    height: 30vh;
+    /*background: conic-gradient( from 270deg,
+    #3F843E 0% 13%,           
+    #2f472f 95% 98.5%,          
+    #2E2E2E 99.9% 100%          
+    );*/
+    background: conic-gradient( from 270deg,
+    #232323 0% 0.1%, 
+    #2c462c 2% 3%,
+    #4b924a 60% 65%,
+    #63d261 96% 99%         /* solid green */
+    );
+}
+.filter{
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    backdrop-filter: blur(0px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: aliceblue;
+    flex-direction: column;
+}
+.title{
+    display: block;
+    border-radius: 20px;
+    padding: 10px;
+}
+.btnPrime{
+    color: aliceblue;
+    background-color: #3F843E;
+    border: none;
+    transition: all ease 0.3s;
+}
+.btnPrime:hover{
+    background-color: #366a35;
+}
+.custom-btn:focus,
+.custom-btn:active,
+.custom-btn.active,
+.show > .custom-btn.dropdown-toggle {
+  background-color: #366a35 !important;  /* your desired color */
+  border-color: none !important;
+  box-shadow: none !important;
+  color: aliceblue; /* optional */
+}
+.btn-dark{
+    transition: all ease 0.3s;
+    border: none;
+    background-color: #2a2a2a;
+}
+.btn-dark:hover{
+    background-color: #232323;
+}
+.dropdownBtn{
+    background-color: #2a2a2a;
+    color: aliceblue;
+    transition: all ease 0.3s;
+    outline: none;
+}
+.dropdownBtn:hover{
+    background-color: #232323;
+}
+.dropdown-menu{
+    background-color: #2E2E2E;
+}
+.dropdown-item{
+    color: aliceblue;
+    transition: all ease 0.3s;
+}
+.dropdown-item:hover{
+    background-color: #424242;
+    color: aliceblue;
+}
+.textfillout{
+    width: 80vw;
+    margin-left: 10vw;
+    background-color: #1c1c1c;
+    padding: 10px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: aliceblue;
+    margin-top: 30px;
+    gap: 10px;
+}
+.backgroundBox{
+    background-color: #1c1c1c;
+    margin-top: 30px;
+    width: 80vw;
+    margin-left: 10vw;
+    border-radius: 30px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+    row-gap: 10px;
+}
+.item{
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.imgBack{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+.rank{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 12.5px;
+    left: 12.5px;
+    background-color: #181818ae;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    border-radius: 10px;
+}
+.textHolder{
+    position: absolute;
+    width: 175px;
+    height: 50px;
+    bottom: 10px;
+    left: 12.5px;
+    background-color: #181818ae;
+    color: aliceblue;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.detail{
+    font-size: 16px;
+    margin: 0;
+}
+#StatsCard{
+    width: 350px;
+    height: 600px;
+    background: radial-gradient(#63d261,#232323);
+    border-radius: 20px;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+}
+.fullFlex{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10px;
+}
+.rowFlex{
+    width: 350px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 10px;
+    padding-left: 10px;
+}
+.tinyimg{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    margin-right: 10px;
+    object-fit: cover;
+}
+.divider{
+    width: 100%;
+    height: 40px;
+}
+.fullScreenCenter{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.bottomControls{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 350px;
+    margin-top: 20px;
+    gap: 10px;
+}
+.maskButton{
+    width: 50px;
+    height: 50px;
+    background-color: #ffffff;
+    border: none;
+    mask-image: url(sliders.svg);
+    mask-position: center;
+    mask-size: cover;
+    mask-repeat: no-repeat;
+
+    -webkit-mask-image:url(sliders.svg);
+    -webkit-mask-position: center;
+    -webkit-mask-size: cover;
+    -webkit-mask-repeat: no-repeat;
+    transition: all ease 0.3s;
+}
+.maskButton:hover{
+    background-color: #3F843E;
+}
+.settingsPannel{
+    width: 350px;
+    height: 400px;
+    position: absolute;
+    padding-left: 10px;
+    top: -420px;
+    overflow-y: auto;
+    left: 0px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: #1c1c1c;
+    display: none;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+    box-sizing: border-box;
+}
+.form-check-label{
+    color: #ffffff;
+}
+.sHeader{
+    color: #ffffff;
+}
+.item2{
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.imgBack2{
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+}
+.rank2{
+    width: 25px;
+    height: 25px;
+    margin-top: 5px;
+    margin-left: 5px;
+    background-color: #181818ae;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    border-radius: 5px;
+}
+.textHolder2{
+    width: 100px;
+    height: 45px;
+    margin-top: 25px;
+    padding: 6px;
+    background-color: #181818ae;
+    color: aliceblue;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.detail2{
+    font-size: 16px;
+    margin: 0;
+}
+@media (max-width:1020px) {
+    .backgroundBox{
+        width: 100vw;
+        margin-left: 0;
+    }
+}
+@media (max-width:820px) {
+    .backgroundBox{
+        width: 100vw;
+        margin-left: 0;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width:620px) {
+    .backgroundBox{
+        width: 100vw;
+        margin-left: 0;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .item{
+        width: 150px;
+        height: 150px;
+        
+    }
+    .textHolder{
+        width: 150px;
+        bottom: 0;
+        left: 0;
+        border-radius: 20px ;
+    }
+    .detail{
+        font-size: 14px;
+    }
+    .title{
+        font-size: 30px;
+    }
+    .textfillout{
+        width: 100vw;
+        margin-left: 0;
+    }
+}
+@media (max-width:590px) {
+    .backgroundBox{
+        width: 100vw;
+        margin-left: 0;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .item{
+        width: 125px;
+        height: 125px;
+        
+    }
+    .textHolder{
+        width: 125px;
+        bottom: 0;
+        left: 0;
+        border-radius: 20px ;
+    }
+    .detail{
+        font-size: 12px;
+    }
+    .rank{
+        width: 30px;
+        height: 30px;
+        left: 5px;
+        top: 5px;
+        font-size: 22px;
+    }
+    
+}
+
+@media (max-width:480px) {
+    .textFillOutText{
+        font-size: 17px;
+    }
+    .dropdownBtn{
+        font-size: 17px;
+    }
+    .title{
+        font-size: 27px;
+    }
+}
+
+
+@media (max-width:400px) {
+    .backgroundBox{
+        width: 100vw;
+        margin-left: 0;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .item{
+        width: 100px;
+        height: 100px;
+        
+    }
+    .textHolder{
+        width: 100px;
+        bottom: 0;
+        left: 0;
+        border-radius: 0px;
+        border-bottom-left-radius: 20px ;
+        border-bottom-right-radius: 20px ;
+    }
+    .detail{
+        font-size: 10px;
+    }
+    .rank{
+        width: 30px;
+        height: 30px;
+        left: 5px;
+        top: 5px;
+        font-size: 22px;
+    }
+    .textFillOutText{
+        font-size: 12px;
+    }
+    .dropdownBtn{
+        font-size: 12px;
+    }
+    .title{
+        font-size: 27px;
+    }
+    
+}
