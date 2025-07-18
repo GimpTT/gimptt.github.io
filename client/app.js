@@ -1,7 +1,7 @@
 
 //This checks that the server is chill with us
 console.log('jsLoaded')
-fetch('http://127.0.0.1:3000/') //--To Replace
+fetch('https://gimp-fm-serverside.onrender.com') //--To Replace
     .then(response => response.text())
     .then(data => {
         console.log(data)
