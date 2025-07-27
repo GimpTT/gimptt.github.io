@@ -7,6 +7,10 @@ body,html{
     overflow-x: hidden;
 }
 
+:root {
+  color-scheme: light !important; 
+}
+
 *{
     font-family: Arial;
 }
