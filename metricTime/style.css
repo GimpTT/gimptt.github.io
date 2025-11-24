@@ -1,0 +1,509 @@
+:root{
+    --BGColor: #fff;
+    --MainColor:#131313;
+}
+html{
+    overflow-x: hidden;
+    overflow-y: scroll;
+    font-size: clamp(20px, 2.5vw, 40px);
+}
+body{
+    background-color: var(--BGColor);
+    
+    margin: 0;
+    padding: 0;
+    /*animation: fadeIn 1s ease forwards;*/
+
+}
+*{
+    font-family: "Jaldi", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--MainColor);
+}
+.topBar{
+    width: 100vw;
+    height: 72px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background-color: var(--BGColor);
+    z-index: 199;
+    animation: deBlur 1s ease forwards;
+
+}
+.centerHolder{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    animation: deBlur 1s ease forwards;
+
+}
+.timeHolder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8rem;
+    width: 100vw;
+    align-self: center;
+}
+.clockNum{
+    font-size: 8rem;
+    line-height: 8rem;
+    margin: 0;
+    padding: 0;
+}
+.clockSpacer{
+    font-size: 8rem;
+    line-height: 8rem;
+    margin: 0;
+    padding: 0;
+
+}
+.CUnit{
+    font-size: 4rem;
+    line-height: 4rem;
+    align-self: flex-end;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.SysName{
+    font-size: 2rem;
+    padding: 0;
+    margin: 0;
+    line-height: 2rem;
+    text-decoration: none;
+    color: var(--MainColor);
+    text-decoration: underline;
+    text-decoration-color: #00000000;
+    text-decoration-thickness: 3px;
+    transition: all ease 0.3s;
+}
+.SysName:hover{
+    text-decoration-color: var(--MainColor);
+}
+.currentClock{
+    display: block;
+    position: absolute;
+    font-size: 2rem;
+    padding: 0;
+    margin: 0;
+    line-height: 2rem;
+    right: 10px;
+}
+.menu{
+    width: 64px;
+    height: 64px;
+    background-color: var(--MainColor);
+    mask-image: url(menuIcon.svg);
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: cover;
+    position: absolute;
+    left: 5px;
+    transition: all ease 0.3s;
+    z-index: 200;
+}
+.menu:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+.menuVis{
+    position: absolute;
+    padding-top: 72px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 100vh;
+    width: fit-content;
+    background-color: var(--BGColor);
+    border-right: var(--MainColor) solid 2px;
+    display: flex;
+    flex-direction: column;
+    z-index: 198;
+    left: 0;
+    top: 0;
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: all ease 0.3s;
+}
+.menuOpt{
+    color: var(--MainColor);
+    font-size: 1rem;
+    padding: 0;
+    margin: 0;
+    line-height: 1.5rem;
+    transition: all ease 0.3s;
+    text-decoration: underline;
+    text-decoration-color: #00000000;
+    text-decoration-thickness: 2px;
+}
+.menuOpt:hover{
+    transform: scale(1.05);
+    text-decoration-color: #1e1e1e;
+}
+.menuVis.open{
+    transform: translateX(0);
+    opacity: 1;
+}
+.pageTitle{
+    font-size: 4rem;
+    color: var(--MainColor);
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pageTitle span{
+    display: block;
+    position: relative;
+    opacity: 0;
+    transform: translateY(50px);
+}
+.animateText span{
+    display: inline-block;
+    position: relative;
+    opacity: 0.01;
+    transform: translateY(50px);
+}
+.sectionHolder{
+    width: 100vw;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.sectionText{
+    width: 80vw;
+    color: var(--MainColor);
+    font-size: .75rem;
+}
+.timeTable{
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    overflow-x: scroll;
+}
+.tableHeader{
+    width: 900px;
+    display: grid;
+    font-size: 0.75rem;
+    grid-template-columns: repeat(auto-fill, 150px);
+    border: #00000000 solid 3px;
+    transition: all ease 0.3s;
+    border-radius: 3px;
+}
+
+.tableHeader:hover{
+    border: var(--MainColor) solid 3px;
+}
+.tabelText{
+    align-self: center;
+    justify-self: center;
+}
+.tabelHead{
+    border-bottom: var(--MainColor) solid 3px;
+}
+.timeConverter{
+    width: 4.68rem;
+    height: 6.25rem;
+    font-size: 5.625rem;
+    background-color: var(--BGColor);
+    border-radius: 5px;
+    border: solid var(--MainColor) 3px;
+    outline: none;
+    text-align: center; 
+    transition: all ease 0.3s;   
+}
+.timeConverter:hover{
+    transform: scale(1.1);
+}
+.timeConverter:focus{
+    transform: scale(1.1);
+}
+.timeConverter::placeholder{
+    opacity: 0.5;
+}
+.metricTimeHolder::placeholder{
+    font-size: 4.375rem;
+}
+.timeConvHold{
+    gap: 20px;
+}
+.converter{
+
+    flex-direction: column;
+}
+#spacr::placeholder{
+    color: var(--MainColor);
+    font-size: 5.625rem;
+    opacity: 1;
+}
+.centerBTNUp{
+    width: 75px;
+    height: 75px;
+    background-color: var(--MainColor);
+    border: solid var(--MainColor) 3px;
+    border-radius: 5px;
+    mask-image: url(arrowUP.svg);
+    mask-position: center;
+    mask-size: cover;
+    mask-repeat: no-repeat;
+    transition: all ease 0.3s;
+}
+.centerBTNUp:hover{
+    transform: scale(1.3);
+    cursor: pointer;
+}
+.centerBTNholder{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.centerBTNDown{
+    width: 75px;
+    height: 75px;
+    background-color: var(--MainColor);
+    border: solid var(--MainColor) 3px;
+    border-radius: 5px;
+    mask-image: url(arrowDown.svg);
+    mask-position: center;
+    mask-size: cover;
+    mask-repeat: no-repeat;
+    transition: all ease 0.3s;
+    transition: all ease 0.3s;
+
+}
+.centerBTNDown:hover{
+    transform: scale(1.3);
+    cursor: pointer;
+}
+.sectionHeader{
+    font-size: 2.75rem;
+    color: var(--MainColor);
+    width: 80%;
+    text-align: left;
+}
+.sectionCode{
+    width: 80vw;
+    font-size: 0.7rem;
+    font-family: "Jaldi", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--MainColor);
+    border-top: solid var(--MainColor) 2px;
+    border-bottom: solid var(--MainColor) 2px;
+    padding: 0;
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+.inParagraphLink{
+    display: inline-block;
+    color: var(--MainColor);
+    transition: all ease 0.3s;
+}
+.inParagraphLink:hover{
+    transform: scale(1.05) translateY(-5px);
+}
+.clockBody{
+    width: 64px;
+    height: 64px;
+    border-radius: 72px;
+    border: solid var(--MainColor) 3px;
+    display: block;
+    position: absolute;
+    font-size: 2rem;
+    padding: 0;
+    margin: 0;
+    line-height: 2rem;
+    right: 10px;
+
+}
+.clockHand{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    clip-path: inset(0 50% 0 0);
+
+}
+.longHand{
+    width: 80%;
+    height: 5px;
+    border-radius: 72px;
+    background-color: var(--MainColor);
+}
+.medHand{
+    width: 75%;
+    height: 4px;
+    border-radius: 72px;
+    background-color: var(--MainColor);
+}
+.shortHand{
+    width: 60%;
+    height: 3px;
+    border-radius: 72px;
+    background-color: var(--MainColor);
+}
+.notch{
+    height: 4px;
+    width: 110%;
+    border-radius: 20px;
+    background-color: var(--MainColor);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.topNotch{
+    clip-path: inset(0 90% 0 0);
+    transform:translate(-50%, -50%) rotateZ(90deg);
+}
+.leftNotch{
+    clip-path: inset(0 90% 0 0);
+    transform:translate(-50%, -50%) rotateZ(180deg);
+}
+.bottomNotch{
+    clip-path: inset(0 90% 0 0);
+    transform:translate(-50%, -50%) rotateZ(0deg);
+}
+.rightNotch{
+    clip-path: inset(0 90% 0 0);
+    transform:translate(-50%, -50%) rotateZ(-90deg);
+}
+
+
+.fadeUpIn{
+    opacity: 0.01;
+}
+
+.fadeOut{
+    animation: fadeOut 0.3s ease forwards;
+}
+.fadeIn{
+    animation: fadeIn 0.3s ease forwards;
+}
+.fadeInUp{
+    animation: fadeInUp 0.3s ease forwards;
+}
+.fadeInSpecial{
+    opacity: 0;
+    animation: fadeIn 1s linear(0, 0.402 7.4%, 0.711 15.3%, 0.929 23.7%, 1.008 28.2%, 1.067 33%, 1.099 36.9%, 1.12 41%, 1.13 45.4%, 1.13 50.1%, 1.111 58.5%, 1.019 83.2%, 1.004 91.3%, 1) 1s forwards;
+}
+
+
+@keyframes fadeOut {
+    0%{
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(-50px) scale(0.8);
+    }
+}
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+@keyframes fadeInUp {
+    0%{
+        opacity: 0;
+        transform: translateY(50px) scale(0.8);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+
+    }
+}
+@keyframes deBlur {
+    0%{
+        opacity: 0;
+        filter: blur(10px);
+    }
+    100%{
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+@media (max-width:730px){
+    .pageTitle{
+        font-size: 2.5rem;
+    }
+    .timeConverter{
+        width: 3.5rem;
+        height: 5.5rem;
+    }
+    .timeConvHold{
+        gap: 10px;
+    }
+}
+
+@media (max-width: 550px){
+    .timeConvHold{
+        gap: 5px;
+    }
+    .menu{
+        width: 45px;
+        height: 45px;
+    }
+}
+@media (max-width: 500px) {
+    .clockNum{
+        font-size: 7.25rem;
+    }
+    .clockSpacer{
+        font-size: 7.25rem;
+    }
+    .topBar{
+        height: 50px;
+    }
+    .menuVis{
+        padding-top: 60px;
+    }
+    .timeConverter::placeholder{
+        font-size: 2.5rem;
+    }
+    .metricTimeHolder::placeholder{
+        font-size: 1.5rem;
+    }
+    .timeConverter{
+        width: 2.7rem;
+        height: 4.7rem;
+    }
+}
+@media (max-width: 430px) {
+    .clockNum{
+        font-size: 6.5rem;
+    }
+    .clockSpacer{
+        font-size: 6.5rem;
+    }
+    .timeConvHold{
+        gap: 3px;
+    }
+    .timeConverter{
+        width: 2.6rem;
+        height: 4.6rem;
+    }
+
+}
