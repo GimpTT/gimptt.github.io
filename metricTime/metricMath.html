@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metric Time</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jaldi:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="topBar">
+        <div class="menu">
+            
+        </div> 
+        <div class="menuVis">
+            <a href="index.html" class="menuOpt">Home</a>
+            <a href="howToUse.html" class="menuOpt">How To Use Metric Time</a>
+            <a href="whatIS.html" class="menuOpt">What Is Metric Time</a>
+            <a href="converter.html" class="menuOpt special">Metric Time Converter</a>
+            <a href="metricMath.html" class="menuOpt">Metric Time Math</a>
+            <a href="metricCDN.html" class="menuOpt">Metric Time JS Library</a>
+            <a href="metricCDNDocs.html" class="menuOpt">Metric Time Lib Docs</a>
+        </div>
+        <a href="index.html"class="SysName">Metric Time</a>
+        <div class="clockBody">
+            <div class="clockHand longHand"></div>
+            <div class="clockHand medHand"></div>
+            <div class="clockHand shortHand"></div>
+        </div>
+    </div>
+    
+    <div class="centerHolder">
+        <h1 class="pageTitle">Metric Time Math</h1>
+    </div>
+    <div class="sectionHolder">
+        <p class="sectionText animateText">&nbsp;&nbsp;&nbsp;&nbsp;To start with the math, we need to observe several design challenges that metric time had to overcome. The first of those being that we needed to preserve the length of a day. That is why there is a unit that equals exactly 1 day in the metric system. The kilochron (Kc) is that unit. This is important since a day isn’t an abstract idea, and therefore it needs to be respected. Every unit is really just several 10x of 1/10th of the Kc. Such as the chron (C), which is 1/1000th of a Kc. The chron is the base unit of the metric time system. This is because it is 1.44 minutes long.  1.44 minutes is a big enough unit that it isn’t obsolete, but it isn’t too big that everyone measures in a smaller unit. Below is the conversion table. The best way to convert an old time into metric time is to convert the time all into a smaller unit. After that, you just do the conversion to get the metric time. </p>
+        <div class="timeTable">
+            <div class="tableHeader tabelHead fadeUpIn">
+                <p class="tabelText">Name</p>
+                <p class="tabelText">Abbreviation</p>
+                <p class="tabelText">Days</p>
+                <p class="tabelText">Hours</p>
+                <p class="tabelText">Minutes</p>
+                <p class="tabelText">Seconds</p>
+            </div>
+            <div class="tableHeader fadeUpIn">
+                <p class="tabelText">Kilochron</p>
+                <p class="tabelText">Kc</p>
+                <p class="tabelText">1</p>
+                <p class="tabelText">24</p>
+                <p class="tabelText">1440</p>
+                <p class="tabelText">86400</p>
+            </div>
+            <div class="tableHeader fadeUpIn">
+                <p class="tabelText">Hectochron</p>
+                <p class="tabelText">Hc</p>
+                <p class="tabelText">0.1</p>
+                <p class="tabelText">2.4</p>
+                <p class="tabelText">144</p>
+                <p class="tabelText">8640</p>
+            </div>
+            <div class="tableHeader fadeUpIn">
+                <p class="tabelText">Decachron</p>
+                <p class="tabelText">Dc</p>
+                <p class="tabelText">0.01</p>
+                <p class="tabelText">.24</p>
+                <p class="tabelText">14.4</p>
+                <p class="tabelText">864</p>
+            </div>
+            <div class="tableHeader fadeUpIn">
+                <p class="tabelText">Chron</p>
+                <p class="tabelText">c</p>
+                <p class="tabelText">0.001</p>
+                <p class="tabelText">.024</p>
+                <p class="tabelText">1.44</p>
+                <p class="tabelText">86.4</p>
+            </div>
+            <div class="tableHeader fadeUpIn">
+                <p class="tabelText">Decichron</p>
+                <p class="tabelText">dc</p>
+                <p class="tabelText">0.0001</p>
+                <p class="tabelText">.0024</p>
+                <p class="tabelText">.144</p>
+                <p class="tabelText">8.64</p>
+            </div>
+            <div class="tableHeader fadeUpIn">
+                <p class="tabelText">Centichron</p>
+                <p class="tabelText">cc</p>
+                <p class="tabelText">0.00001</p>
+                <p class="tabelText">.00024</p>
+                <p class="tabelText">.0144</p>
+                <p class="tabelText">.864</p>
+            </div>
+        </div>
+        <p class="sectionText animateText">&nbsp;&nbsp;&nbsp;&nbsp;For example, to convert 9:45 into chron we would do 9*60^2 to get 32400sec and 45*60 to get 2700. Then we add those together which results in 35100. To finish the conversion to chron, we do 35100/86.4 = 406.25c. The current metric time would be 406c. </p>
+
+    </div>
+    <script src="metricTime.js"></script>
+    <script src="app.js"></script>
+    <script src="animations.js"></script>
+</body>
+</html>
