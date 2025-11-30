@@ -1,0 +1,335 @@
+html{
+    font-size: 32px;
+    overflow-x: hidden;
+}
+body{
+    overflow-x: hidden;
+    background-color: #131313;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100vh;
+}
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.color{
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    background-color: oklab(1 0 0);
+    box-shadow: 0px 4px 4px 0px #00000030;
+}
+.ratingBar{
+    width: 300px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.rateer{
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: 0px 2px 2px 0px #00000030;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #00000000;
+    text-shadow: 0px 0px 0px #00000000;
+    font-size: 1.5rem;
+    transition: all ease 0.3s;
+
+}
+.rateer:hover{
+    color: #fff;
+    text-shadow: 0px 4px 4px #00000030;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+#ew{
+    background-color: #ff8080;
+}
+#bad{
+    background-color: #FFA75F;
+}
+#okay{
+    background-color: #FFF27B;
+}
+#good{
+    background-color: #84FF82;
+}
+#great{
+    background-color: #4D7E4E;
+}
+.colorContainer{
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    background-color: #1e1e1e;
+    border-radius: 20px;
+}
+.goOut{
+    animation: slideOut 0.3s ease forwards;
+}
+.goIn{
+    animation: slideIn 0.3s ease forwards;
+}
+@keyframes slideOut {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes slideIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.transFullLayer{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    opacity: 0;
+    transition: all ease 0.3s;
+    position: relative;
+    background-color: #000000b7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.transFullLayer:hover{
+    cursor: pointer;
+}
+@keyframes fadeInWaitOut {
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.bookMark{
+    position: absolute;
+    left:5px;
+    top: 5px;
+    background-color: #fff;
+    mask-image: url(icons/bookMark.svg);
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: cover;
+    width: 50px;
+    height: 50px;
+    transition: all ease 0.3s;
+}
+.bookMark:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.colorName{
+    color: #fff;
+    width: fit-content;
+    height: fit-content;
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+}
+.bookMarksMenuIcon{
+    position: absolute;
+    left:5px;
+    top: 5px;
+    background-color: #fff !important;
+    mask-image: url(icons/allBookMarks.svg);
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: cover;
+    width: 50px;
+    height: 50px;
+    transition: all ease 0.3s;
+    z-index: 20;
+    transition: all ease 0.3s;
+}
+.bookMarksMenuIcon:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.bookMarkMenu{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 300px;
+    height: 100vh;
+    background-color: #1e1e1e;
+    z-index: 19;
+    border-radius: 15px;
+    opacity: 0;
+    transform: translateX(-300px);
+    transition: all ease 0.3s;
+    padding-top: 60px;
+}
+.menuSlideIn{
+    animation: slideInLeft 0.3s ease forwards;
+}
+.menuSlideOut{
+    animation: slideOutLeft 0.3s ease forwards;
+
+}
+.bookMarkHolder{
+    width: 100%;
+    padding-left: 5px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.colorPreviw{
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: 0px 4px 4px 0px #00000030;
+}
+.bookMarkName{
+    font-size: 1rem;
+    color: #fff;
+    margin: 0;
+    margin-left: 20px;
+}
+.optionHolders{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    opacity: 1;
+    transition: all ease 0.3s;
+    position: absolute;
+    right: 10px;
+    top: 0;
+    height: 100%;
+}
+.copyColor{
+    background-color: #fff !important;
+    mask-image: url(icons/copy.svg);
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: cover;
+    width: 40px;
+    height: 40px;
+    transition: all ease 0.3s;
+}
+.copyColor:hover{
+    transform: scale(1.1);
+}
+.removeBookmark{
+    background-color: #fff !important;
+    mask-image: url(icons/removeBookMark.svg);
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: cover;
+    width: 40px;
+    height: 40px;
+    transition: all ease 0.3s;
+}
+.removeBookmark:hover{
+    transform: scale(1.1);
+}
+@keyframes slideInLeft {
+    0%{
+        transform: translateX(-300px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOutLeft {
+    0%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+    100%{
+        transform: translateX(-300px);
+        opacity: 0;
+    }
+}
+.toast{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 4px 4px 0px #00000030;
+    transition: all ease 0.3s;
+    opacity: 0;
+    color: #fff;
+    z-index: 100;
+}
+.statsMenuIcon{
+    position: absolute;
+    left:55px;
+    top: 5px;
+    background-color: #fff !important;
+    mask-image: url(icons/stats.svg);
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: cover;
+    width: 50px;
+    height: 50px;
+    transition: all ease 0.3s;
+    z-index: 20;
+    transition: all ease 0.3s;
+}
+.statsMenuIcon:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.statsMenu{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 300px;
+    height: 100vh;
+    background-color: #1e1e1e;
+    z-index: 19;
+    border-radius: 15px;
+    opacity: 0;
+    transform: translateX(-300px);
+    transition: all ease 0.3s;
+    padding-top: 60px;
+    overflow-y: scroll;
+}
+.header{
+    display: block;
+    width: 100%;
+    font-size: 1.3rem;
+    color: #fff;
+    text-shadow: 0px 4px 4px #00000030;
+    line-height: 1.3rem;
+    padding-left: 5px;
+}
+.statHolder{
+    width: 100%;
+    padding-left: 5px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
