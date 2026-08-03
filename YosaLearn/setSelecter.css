@@ -1,0 +1,117 @@
+:root{
+    --colorBg:#1d1c1c;
+    --colorFg:#FFF9F9;
+    --colorMg:#868484;
+    --ctaColor:#7BA0FF;
+}
+body{
+    overflow-x: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--colorBg);
+    margin: 0;
+    padding: 0;
+}
+html{
+    margin: 0;
+    padding: 0;
+}
+.importQuizlet{
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 24px;
+    background-color: var(--ctaColor);
+    color: var(--colorFg);
+    transition: all ease 0.3s;
+    text-decoration: none;
+    display: block;
+}
+.importQuizlet:hover{
+    cursor: pointer;
+    transform: translateY(-2px);
+}
+.mainContainer{
+    width: 500px;
+    margin-top: 200px;
+}
+.title{
+    color: var(--colorFg);
+    font-size: 48px;
+    border-bottom: solid 3px var(--colorFg);
+    width: 100%;
+}
+.setBTN{
+    width: 100%;
+    border-bottom: solid 1px var(--colorMg);
+    color: var(--colorFg);
+    position: relative;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all ease 0.3s;
+}
+.setBTN:hover{
+    cursor: pointer;
+    border-bottom: solid 1px var(--colorFg);
+}
+.setName{
+    color: var(--colorFg);
+    font-size: 24px;
+}
+.setTerms{
+    color: var(--colorFg);
+    font-size: 24px;
+}
+
+*{
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.dataInput{
+    width: 100%;
+    border: none;
+    border-bottom: solid 1px var(--colorMg);
+    color: var(--colorFg);
+    position: relative;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all ease 0.3s;
+    outline: none;
+    background-color: var(--colorBg);
+    resize: none;
+}
+.backBTN{
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    font-size: 24px;
+    color: #FFF9F9;
+    text-decoration: none;
+    display: block;
+}
+.backBTN:hover{
+    cursor: pointer;
+}
+.ans{
+    width: 24px;
+    height: 24px;
+    border-radius: 5px;
+    background-color: #1d1c1c;
+    border: solid 1px var(--colorMg);
+    transition: all ease 0.3s;
+}
+.ans:hover{
+    cursor: pointer;
+    background-color: var(--colorMg);
+}
